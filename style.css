@@ -1,0 +1,192 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+html{scroll-behavior:smooth}
+
+.navbar{
+    height : 7vh;
+    width : 100%;
+    background-color : #337CCF;
+    position : fixed;
+    top : 0;
+
+    display : flex;
+    flex-direction : row;
+    justify-content : space-between;
+    align-items: center;
+
+    color : white;
+
+    z-index : 1;
+}
+
+.navbar img{
+    height: 6vh;
+    width : 6vh;
+    border-radius : 50%;
+    object-fit  : contain;
+
+    margin-left : 2vw;
+}
+
+.navbar ul{
+    display : flex;
+    flex-direction : row;
+    width : auto;
+    gap : 1em;
+    margin-right : 2vw;
+}
+.navbar li{
+    list-style-type : none;
+}
+
+.bottom-border{
+    height: 1.2px;
+    background-color : #FFC436;
+    width : 0%;
+}
+.navbar li:hover{
+    cursor : pointer;
+}
+.navbar li:hover .bottom-border{
+    animation : bottom-border-animation 300ms ease-out 0ms forwards;
+    
+}
+
+@keyframes bottom-border-animation{
+    0%{
+        width : 0;
+    }
+    100%{
+        width : 100%;
+    }
+}
+
+
+#home{
+    display : flex;
+    flex-direction : column;
+    height: auto;
+    width : 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    gap : 1em;
+    margin-top : 13vh;
+}
+
+#home h1{
+    font-size : 4em;
+    color : #191D88;
+}
+
+#home p{
+    width : 80%;
+    text-align : center;
+}
+
+#internship{
+    height : auto;
+    width : 100%;
+    background-color : #191D88;
+    padding : 2em 0;
+
+    margin-top : 5vh;
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items : center;
+}
+
+#internship h1{
+    color : white;
+    margin-bottom : 1em;
+}
+
+.card-box{
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    gap : 2em;
+}
+
+.card{
+    width : 30vw;
+    border : solid 2px #FFC436;
+    border-radius : 10px;
+    background-color : white;
+
+    display : flex;
+    flex-direction: column;
+    gap : 1em;
+    padding : 1em 0;
+
+}
+
+.card:hover{
+    transform: translate(-2% , -2%);
+    transform : scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.card h1{
+    color : #191D88 !important;
+    margin-left : 10%;
+
+    margin-bottom: 0 !important;
+}
+
+.card ul{
+    margin-left : 10%;
+}
+.button{
+    padding : .6em 1em;
+    width : fit-content;
+    background-color: #337CCF;
+    border-radius: 10px;
+    color : white;
+
+    align-self: center;
+    cursor : pointer;
+}
+
+.card-last-child{
+    position: relative;
+    left : 50%;
+}
+
+form{
+    display: flex;
+    flex-direction : column;
+
+    width : 50%;
+    position : relative;
+    left : 50%;
+    transform : translateX(-50%);
+
+    margin : 5vh 0;
+    border : solid 2px #FFC436;
+    border-radius : 10px;
+
+    padding : 2em 3em;
+    gap : .6em;
+}
+
+form :first-child{
+    border-bottom : solid 2px #191D88;
+    width : fit-content;
+    margin-bottom : .3em;
+    color : #191D88;
+
+}
+
+form :nth-last-child(1)
+{
+    margin-top : 1em;
+}
+
+
+a{
+    text-decoration : none;
+    color : white;
+}
